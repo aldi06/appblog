@@ -22,11 +22,20 @@ class Login extends CI_Controller {
 	{
 		$Login_salah = '';
 
+		if($this->session->has_userdata('username')) {
+			redirect('backend/dashboard');
+		}
+
 		if($this->input->post()) {
 		$username = $this->input->post('username');
 		$password = $this->input->post('password');
 
-		if($username == 'aldi' && $password == '123'){
+		$user = \Orm\User::first();
+		if($username == $user->username && $password == $user->password){
+			$userdata = [
+				'username' => $user->username,
+			];
+			$this->session->set_userdata($userdata);
 			redirect('backend/dashboard');
 		} else {
 			$Login_salah = 'kombinasi username & password salah';
@@ -34,5 +43,11 @@ class Login extends CI_Controller {
 	}
 
 		view('login', ['Login_salah' => $Login_salah]);
+	}
+
+	public function Logout()
+	{
+		$this->session->sess_destroy();
+		redirect('Login');
 	}
 }
