@@ -13,14 +13,14 @@
 
 <form method="post" action="{{ current_url() }}">
   <div class="mb-3">
-    <label for="title" class="form-label">Title</label>
+    <label for="title" class="form-label"><b>Title</b></label>
     <input type="text" class="form-control" name="title" id="title" value="{{ $post->title ?? '' }}">
   </div>
   <div class="mb-3">
-    <label for="article" class="form-label">Article</label>
+    <label for="article" class="form-label"><b>Article</b></label>
     <textarea class="form-control" name="article">{{ $post->article ?? '' }}</textarea>
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary"><b>Submit</b></button>
   <a href="{{ site_url('backend/article/list') }}" class="btn btn-secondary">Kembali</a>
 </form>
 @endsection
