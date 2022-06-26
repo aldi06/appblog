@@ -1,7 +1,7 @@
 @extends('template.backend.theme')
 @section('content')
 <br>
-<a href="{{ site_url('backend/article/form') }}">Tambah Data</a>
+<a class="btn btn-dark" href="{{ site_url('backend/article/form') }}">Tambah Data</a>
 <br>
 @if(isset($flashdata['notif']))
 <br>
