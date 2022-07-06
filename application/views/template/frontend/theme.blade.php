@@ -15,6 +15,8 @@
     
 
 <link href="https://getbootstrap.com/docs/5.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
 
     <!-- Favicons -->
   <!--
@@ -93,15 +95,12 @@
   <header class="blog-header lh-1 py-3">
     <div class="row flex-nowrap justify-content-between align-items-center">
       <div class="col-4 pt-1">
-        <a class="link-secondary" href="#">Subscribe</a>
+      &nbsp;
       </div>
       <div class="col-4 text-center">
-        <a class="blog-header-logo text-dark" href="#">Large</a>
+        <a class="blog-header-logo text-dark">Blog Sederhana</a>
       </div>
       <div class="col-4 d-flex justify-content-end align-items-center">
-        <a class="link-secondary" href="#" aria-label="Search">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"/><path d="M21 21l-5.2-5.2"/></svg>
-        </a>
         <a class="btn btn-sm btn-outline-secondary" href="{{ site_url('login') }}">Login</a>
       </div>
     </div>
@@ -109,18 +108,8 @@
 
   <div class="nav-scroller py-1 mb-2">
     <nav class="nav d-flex justify-content-between">
-      <a class="p-2 link-secondary" href="#">World</a>
-      <a class="p-2 link-secondary" href="#">U.S.</a>
-      <a class="p-2 link-secondary" href="#">Technology</a>
-      <a class="p-2 link-secondary" href="#">Design</a>
-      <a class="p-2 link-secondary" href="#">Culture</a>
-      <a class="p-2 link-secondary" href="#">Business</a>
-      <a class="p-2 link-secondary" href="#">Politics</a>
-      <a class="p-2 link-secondary" href="#">Opinion</a>
-      <a class="p-2 link-secondary" href="#">Science</a>
-      <a class="p-2 link-secondary" href="#">Health</a>
-      <a class="p-2 link-secondary" href="#">Style</a>
-      <a class="p-2 link-secondary" href="#">Travel</a>
+      <a class="btn btn-outline-dark" href="{{ site_url('/') }}">
+      <i class="bi bi-house-door" style="margin-right: 6px;"></i>Home</a>
     </nav>
   </div>
 </div>
@@ -128,50 +117,20 @@
 <main class="container">
   <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
     <div class="col-md-6 px-0">
-      <h1 class="display-4 fst-italic">Title of a longer featured blog post</h1>
-      <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.</p>
-      <p class="lead mb-0"><a href="#" class="text-white fw-bold">Continue reading...</a></p>
-    </div>
-  </div>
-
-  <div class="row mb-2">
-    <div class="col-md-6">
-      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-        <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-primary">World</strong>
-          <h3 class="mb-0">Featured post</h3>
-          <div class="mb-1 text-muted">Nov 12</div>
-          <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="stretched-link">Continue reading</a>
-        </div>
-        <div class="col-auto d-none d-lg-block">
-          <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-        </div>
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-        <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-success">Design</strong>
-          <h3 class="mb-0">Post title</h3>
-          <div class="mb-1 text-muted">Nov 11</div>
-          <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="stretched-link">Continue reading</a>
-        </div>
-        <div class="col-auto d-none d-lg-block">
-          <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-        </div>
-      </div>
+      <h1 class="display-4 fst-italic">Selamat Datang Di Blog Sederhana </h1>
+      <p class="lead my-3">Di blog yang sederhana ini, anda bisa menemukan berita-berita yang aktual, 
+        terbaru dan yang paling penting adalah fakta. Di blog ini, anda bisa mencari berbagai berita 
+        yang anda ingin membacanya.</p>
     </div>
   </div>
 
   <div class="row g-5">
     <div class="col-md-8">
-      <h3 class="pb-4 mb-4 fst-italic border-bottom">
-        From the Firehose
-      </h3>
+    
+    <form action="{{ site_url('post') }}">
+    <input class="form-control" id="cari" name="cari" placeholder="Cari Artikel Yang Anda Mau" >
+    </form>
+    <br>
 
       @yield('content')
 
@@ -208,7 +167,7 @@
         </div>
 
         <div class="p-4">
-          <h4 class="fst-italic">Elsewhere</h4>
+          <h4 class="fst-italic">Sosial Media</h4>
           <ol class="list-unstyled">
             <li><a href="#">GitHub</a></li>
             <li><a href="#">Twitter</a></li>
